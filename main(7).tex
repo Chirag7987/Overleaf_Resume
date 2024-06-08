@@ -1,0 +1,326 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\begin{flushleft}
+    \textbf{\large Ishan Joshi} \\    
+    \textit{Baltimore, United States} $|$ 
+    \textit{+1 (551) 344-7885‬} $|$  
+    \href{mailto:ishan.joshiapplication@gmail.com}{{\textit{Email}}} $|$ 
+    \href{https://www.linkedin.com/in/ishanjoshi6286/}{{\textit{linkedin}}} $|$
+    \href{https://123ishan.github.io/portfolio/}{{\textit{github}}}
+    \vspace{-8pt}
+\end{flushleft}
+
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+\section{Professional Summary}
+\vspace{-3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     {Experiance software developer with 5+ years expertise in full-stack development and Devops, delivering well-documented and tested solutions. Demonstrates strong collaborative skills and a proven ability to communicate and innovate independently.} \\      
+    }}
+ \end{itemize}
+ \sectionspace
+
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+% \section{Awards and Certifications}
+%     \resumeSubHeadingListStart
+%       \resumeProjectHeading
+%           {\titleItem{Star Award} \emph{ $|$ Company 1}}{September 2018}
+%       \resumeProjectHeading
+%           {\titleItem{Kudos Award} \emph{ $|$ Company 2}}{May 2017}
+%       \resumeProjectHeading
+%           {\titleItem{IBM Full Stack Software Developer} \emph{$|$ IBM}}{November 2023}
+%           \resumeProjectHeading
+%           {\titleItem{CompTia Sec+} \emph{$|$ CompTia}}{December 2023}
+%     \resumeSubHeadingListEnd
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+\section{Technical Skills}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \titleItem{Programming Languages}{: Java, Python, JavaScript, SQL, Bash Scripting} \\
+     \titleItem{Frameworks \& Libraries}{: Spring Boot, Spring MVC, Hibernate, React JS, Angular JS, Node.js} \\
+     \titleItem{DevOps Tools \& Clouds}{: Docker, Kubernetes, Jenkins, Git, Azure DevOps, Ansible, Terraform, AWS, Google Cloud Platform} \\
+     \titleItem{Database Management}{: MySQL, MongoDB, Oracle DBMS, PostgreSQL} \\
+     \titleItem{Monitoring Tools}{: Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana)} \\
+     \titleItem{Additional Skills}{: REST API, JSON, Microservices Architecture, Data Modelling, Agile Methodologies (Scrum/Kanban), Continuous Integration/Continuous Deployment (CI/CD)}
+    }}
+\end{itemize}
+\sectionspace
+
+
+
+
+    
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+         {\textbf{Data Analyst} $|$ \emph{Holland America Group}, Seattle, WA}{May 2023 - Spetember 2023}
+    \resumeItemListStart
+      \resumeItem{Analyzed and interpreted complex data sets using SQL and Python, identifying key trends that influenced strategic decisions and resulted in a 15\% increase in operational efficiency. Utilized advanced data analytics, machine learning models, and visualization tools.}
+      \resumeItem{Managed and optimized large-scale data processes involving over 2 TB of data, employing techniques in data cleaning, manipulation, and extraction to enhance marketing strategies.}
+      \resumeItem{Conducted multi-dimensional data analysis integrating SQL, Python, and Tableau for comprehensive business intelligence and customer insights, significantly boosting sales metrics.}
+      \resumeItem{Developed predictive models and automated data pipelines using SQL, Python, and R, enhancing business decision-making processes and operational responsiveness.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+         {\textbf{Senior Software Development Engineer} $|$ \emph{Volkswagen Group IT Services}, India}{September 2019 -- September 2022}
+    \resumeItemListStart
+      \resumeItem{Architected and deployed scalable microservices using Java and Spring Boot, incorporating Docker and Kubernetes for container management and orchestration, leading to improved system resilience and efficiency.}
+      \resumeItem{Led the front-end and back-end development of an SLA Tracker using React.js, Node.js, and integrating RESTful APIs, achieving project goals under budget and enhancing service reliability.}
+      \resumeItem{Supervised a cross-functional development team employing Agile methodologies and continuous integration/continuous deployment (CI/CD) practices to speed up delivery and enhance product quality.}
+      \resumeItem{Optimized front-end performance by implementing state management solutions in React, improving user engagement and operational efficiency through enhanced UI/UX designs.}
+    \resumeItemListEnd
+
+    \resumeProjectHeading
+         {\textbf{Web Development Intern} $|$ \emph{Spring Jaunter}, India}{January 2019 -- March 2019}
+    \resumeItemListStart
+      \resumeItem{Engineered and deployed a full-stack solution using React.js and Node.js, focusing on streamlining operational processes through automated solutions and advanced web technologies.}
+      \resumeItem{Contributed to a major e-commerce platform overhaul, improving system architecture and enhancing front-end features using HTML5, CSS3, and JavaScript to elevate user experience and conversion rates.}
+      \resumeItem{Developed custom internal applications focusing on productivity improvements, employing modern JavaScript frameworks and server-side technologies to automate routine tasks effectively.}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Utah}{Salt Lake City, UT}
+%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023} 
+%     \resumeSubheading
+%       {SRM University}{Chennai, TN, India}
+%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
+%   \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+\section{Education}    
+     \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\titleItem{{Master Of Science In Information Systems}} $|$ \emph{3.7}}{August 2022 -- May 2024}
+           \resumeItem{{University of Maryland} $,$ \emph{Baltimore, MD, USA}}
+       \resumeProjectHeading
+           {\titleItem{{Bachelor of Engineering in Computer Science}} $|$ \emph{3.9}}{July 2015 -- May 2019}
+           \resumeItem{{Pune University} $,$ \emph{Pune, India}}
+     \resumeSubHeadingListEnd
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}    
+     \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\textbf{Automatic Diagnosis of Quantum Software Bug-Fix} $|$ \emph{Python, Algorithm Development, System Debugging}}{\href{https://tinyurl.com/GITQUNTUM}{{\textit{Github}}}}
+            \resumeItemListStart
+            \resumeItem{Engineered an automated diagnostic system for quantum software bugs, utilizing advanced algorithms to reduce bug resolution time by 50\%. Demonstrated proficiency in Python, algorithm optimization, and system debugging.}
+           \resumeItemListEnd
+       
+        \resumeProjectHeading
+           {\textbf{Water Potability Analysis} $|$ \emph{Data Science, Python, Jupyter}}{\href{https://github.com/123Ishan/Water-Potability}{{\textit{Github}}}}
+            \resumeItemListStart
+            \resumeItem{Leveraged Python in a Jupyter notebook environment to analyze and visualize water quality data, applying data science techniques to ensure health and safety compliance. Skills in data manipulation and statistical analysis were critical.}
+           \resumeItemListEnd
+           
+        \resumeProjectHeading
+           {\textbf{Deep Learning Model for Diabetic Retinopathy} $|$ \emph{Machine Learning, Python, Image Processing}}{\href{https://github.com/123Ishan/Diabatic-Retenipathy-Detection}{{\textit{Github}}}}
+            \resumeItemListStart
+            \resumeItem{Employed Python and advanced image preprocessing techniques; evaluated models using metrics like accuracy, precision, recall, IoU, and Dice Coefficient, focusing on machine learning and performance optimization.}
+           \resumeItemListEnd
+
+        \resumeProjectHeading
+           {\textbf{Android Application for Road Smoothness} $|$ \emph{Full-Stack Development, Java, JSP, GPS Integration}}{}
+            \resumeItemListStart
+            \resumeItem{Utilized Java Server Pages (JSP), HTML, CSS with Bootstrap for the app's backend and frontend development. Integrated GPS data handling and real-time alert mechanisms, demonstrating skills in full-stack development and user interface design.}
+           \resumeItemListEnd
+     \resumeSubHeadingListEnd
+
+
+
+
+%-------------------------------------------
+\end{document}

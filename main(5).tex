@@ -1,0 +1,316 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Shubham Mazumder
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\begin{flushleft}
+    \textbf{\large Chandra Kesava} \\    
+    \textit{Potsdam, NY, USA} $|$ 
+    \textit{+1 (315) 603-7675} $|$  
+    \href{mailto:chandrakesavab3050@gmail.com}{{\textit{Mail}}} $|$ 
+    \href{https://www.linkedin.com/in/chandrakesava}{{\textit{Linkedin}}} $|$
+    \href{https://github.com/Chandu-3050}{{\tesxtit{Github}}}
+    \vspace{-8pt}
+\end{flushleft}
+
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+\section{Professional Summary}
+\vspace{-3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     {Experienced Python developer with a Master’s in Computer Science, specialized in automating complex systems using technologies like Python, Snowflake, and Frameworks. Demonstrated ability to significantly boost system efficiency and functionality.} \\      
+    }}
+ \end{itemize}
+ \sectionspace
+
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\section{Awards and Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\titleItem{Finished in the top 10\% in National Science Examination conducted by IAPT.}}{2015}
+      \resumeProjectHeading
+          {\titleItem{Appeared in Final level NTSE and RMO Examinations.}}{2017}
+      \resumeProjectHeading
+          {\titleItem{Achieved 25th DSL rank in Math Scholarship Exam.}}{2014}
+       \resumeProjectHeading
+          {\titleItem{Distinctive participation in 7th International Mathematics Olympiad.}}{2013}
+    \resumeSubHeadingListEnd
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+
+\section{Technical Skills}
+\subheadingtitlevspace
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \titleItem{Languages}{: Python, SQL, HTML/CSS, JavaScript} \\
+     \titleItem{Expertise Area}{: Data Structures and Algorithms, Object-Oriented Programming (OOP), Cloud Data Warehousing} \\
+     \titleItem{Tools and Frameworks}{: Snowflake, Docker, Flask, Pandas, NumPy, Matplotlib, SciPy} \\
+     \titleItem{Machine Learning}{: Scikit-learn, TensorFlow, Keras, PyTorch, OpenCV} \\
+     \titleItem{Cloud Platforms}{: AWS, Microsoft Azure, Google Cloud Platform} \\
+     \titleItem{Database}{: Snowflake, PostgreSQL, MongoDB, Redis} \\
+     \titleItem{Continuous Integration/Continuous Deployment}{: Jenkins, GitHub Actions, GitLab CI/CD, Git}
+    }}
+\end{itemize}
+\sectionspace
+
+
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\titleItem{{Software Developer Intern}} $|$ \emph{Zutek LLC Company}}{January 2024 - Present}
+\resumeItemListStart
+  \resumeItem{Designed and implemented a social media scheduling tool, automating post timing across Twitter, Facebook, and LinkedIn, which boosted user engagement metrics by 30\% through optimized scheduling algorithms.}
+  \resumeItem{Developed AI-driven dynamic content generation features that tailored content to user behavior and preferences, significantly increasing interaction rates on client platforms.}
+  \resumeItem{Integrated predictive analytics to determine optimal posting times, resulting in increased client content visibility and user engagement by 30\%.}
+  \resumeItem{Led the development of a responsive frontend using HTML, CSS, and JavaScript, enhancing user experience by creating an intuitive user interface that improved navigation and usability.}
+\resumeItemListEnd
+
+\resumeProjectHeading
+  {\titleItem{{Software Engineer}} $|$ \emph{Wipro Limited}}{December 2021 – July 2023}
+\resumeItemListStart
+  \resumeItem{Engineered data sharing solutions and performance tuning in Snowflake, reducing query times by 40\% and enhancing data retrieval efficiency for enterprise clients.}
+  \resumeItem{Implemented data warehousing solutions using Informatica PowerCenter on Amazon Web Services, which improved ETL processes by 30\% and supported scalable data operations.}
+  \resumeItem{Optimized Data Movement from traditional data warehouses to Snowflake, achieving a 50\% increase in data transfer efficiency and reducing operational costs by 20\%.}
+  \resumeItem{Developed and maintained ETL scripts and workflows, ensuring seamless data integration and consistency across multiple cloud platforms.}
+  \resumeItem{Utilized Python and SQL for automating data manipulation tasks, which streamlined reporting processes and decreased manual intervention by 60\%.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Utah}{Salt Lake City, UT}
+%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023} 
+%     \resumeSubheading
+%       {SRM University}{Chennai, TN, India}
+%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
+%   \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+\section{Education}    
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\titleItem{{Master of Science in Computer Science}} $|$ \emph{CGPA: 3.6/4.0}}{2023 -- Present}
+           \resumeItem{{Clarkson University} $,$ \emph{Potsdam, NY, USA}}
+        \resumeProjectHeading
+           {\titleItem{{Bachelor of Technology in Computer Science and Engineering}}}{2017 -- 2021}
+           \resumeItem{{Indian Institute of Information Technology} $,$ \emph{Nagpur, India}}
+    \resumeSubHeadingListEnd
+
+
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}    
+\resumeSubHeadingListStart
+    \resumeProjectHeading
+    {\titleItem{Identifying Disease Drug for Drug Repurposing using RWR} $|$ \emph{Python, TensorFlow, Machine Learning}}{}
+    \resumeItemListStart
+    \resumeItem{Engineered a predictive model leveraging the Random Walk with Restart (RWR) technique in Python and TensorFlow to identify potential drug targets for emerging diseases, demonstrating deep analytical capabilities and machine learning proficiency.}
+    \resumeItemListEnd
+    \resumeProjectHeading
+        {\titleItem{Black Box} $|$ \emph{Arduino C, GSM, GPS systems, Data Analytics}}{}
+        \resumeItemListStart
+        \resumeItem{Developed a vehicle safety device using Arduino C, incorporating GPS for real-time location tracking and GSM modules for instant communication following an incident.}
+        \resumeItem{Integrated the system with a cloud-based analytics platform on Google Cloud to process data from sensors in real-time, using Pandas and NumPy for data analysis to improve accident response strategies.}
+        \resumeItemListEnd
+    \resumeProjectHeading
+        {\titleItem{Online Music System} $|$ \emph{MySQL, Flask, Docker}}{}
+        \resumeItemListStart
+        \resumeItem{Designed and built a scalable online music streaming service using Flask, with MySQL for database management, hosted in Docker containers to ensure consistent environments across development and production.}
+        \resumeItemListEnd
+\resumeSubHeadingListEnd
+%-------------------------------------------
+\end{document}

@@ -1,0 +1,322 @@
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+% Resume in Latex
+% Author : Shubham Mazumder
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+%------------------------------------------------------------------------------
+
+\documentclass[letterpaper,10pt]{article}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{soul}
+\input{glyphtounicode}
+\usepackage[margin=0.5in]{geometry}
+
+%----------FONT OPTIONS----------
+% Sans-serif Fonts
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault,light]{inter}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage{roboto}
+% \usepackage[sfdefault,medium]{InriaSans}
+\usepackage[default]{sourcesanspro}
+
+% Serif Fonts
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% -------------------------------------
+%----------PAGE SETUP------------------
+% -------------------------------------
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+% \addtolength{\oddsidemargin}{0.5pt}
+% \addtolength{\evensidemargin}{0.5pt}
+% \addtolength{\textwidth}{0.9in}
+% \addtolength{\topmargin}{-0.6in}
+% \addtolength{\textheight}{1.6in}
+
+% \addtolength{\oddsidemargin}{-.875in}
+% \addtolength{\evensidemargin}{-.875in}
+% \addtolength{\textwidth}{1.75in}
+% \addtolength{\topmargin}{-.875in}
+% \addtolength{\textheight}{1.75in}
+
+% URL style
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-5pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+% ----------- Definitions -----------------------
+\def\spaceforrole{ }
+\definecolor{lightyellow}{cmyk}{0.00, 0.05, 0.20, 0.00} % Highlights
+\sethlcolor{lightyellow} % Highlights
+
+%--------------- Custom commands -----------------------
+
+\newcommand{\sectionspace}{
+\vspace{-20pt}
+}
+
+\newcommand{\subheadingtitlevspace}{
+\vspace{-3pt}
+}
+
+
+% Resume Item
+\newcommand{\resumeItem}[1]{
+  \item{
+    {#1 \vspace{-4pt}}
+  }
+}
+
+% Titles
+\newcommand{\titleItem}[1]{
+  % \textsl{\textbf{#1}}
+  \textbf{#1}
+}
+
+
+% Highlighting
+\newcommand{\highlight}[1]{
+  \textsl{\textbf{#1}}
+  % \hl{\textsl{\textbf{#1}}}
+  % \textbf{#1}
+  % \textsl{\hl{#1}}
+}
+
+% Resume Subheading
+\newcommand{\resumeSubheading}[4]{
+  \item
+     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}l@{}l}     
+      {#1} & \titleItem{#3} | {#2} & \textit{#4}\\
+    \end{tabular*}\vspace{-10pt}
+}
+
+% \newcommand{\resumeSubheading}[4]{
+%   \item
+%     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%       \textbf{#1} & #2 \\
+%       \textit{#3} & \textit{#4} \\
+%     \end{tabular*}\vspace{-8pt}
+% }
+
+
+
+% Resume Sub-sub heading
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+% Resume Project Heading
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & \textit{ #2} \\
+    \end{tabular*}\vspace{-9pt}
+}
+
+%Resume Subheading List
+\newcommand{\resumeSubHeadingListStart}{\subheadingtitlevspace\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+%Resume Item List
+\newcommand{\resumeItemListStart}{
+% \vspace{-1pt}
+\begin{itemize}}
+\newcommand{\resumeItemListEnd}{
+% \vspace{-6pt}
+\end{itemize}\vspace{-8pt}}
+
+%-------------------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-------------------------------------------------------
+
+\begin{document}
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\begin{flushleft}
+    \textbf{\large Nagaraju Dasara} \\    
+    \textit{Potsdam, NY, USA} $|$ 
+    \textit{+1 (315) 603-7692} $|$  
+    \href{mailto:nagarajudasara@gmail.com}{{\textit{Mail}}} $|$ 
+    \href{https://www.linkedin.com/in/nagaraj-yadav/}{{\textit{Linkedin}}} $|$
+    \href{https://github.com}{{\textit{Github}}}
+    \vspace{-8pt}
+\end{flushleft}
+
+% -------------------------------------
+%---------- PROFESSIONAL SUMMARY ------
+% -------------------------------------
+
+\section{Professional Summary}
+\vspace{-3pt}
+\begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     {Experienced full-stack developer with a Master’s in Computer Science, specialized in automating complex systems using technologies like Python, Go, and Frameworks. Demonstrated ability to significantly boost system efficiency and functionality.} \\      
+    }}
+ \end{itemize}
+ \sectionspace
+
+
+% -------------------------------------
+%----------HEADING---------------------
+% -------------------------------------
+
+\section{Awards and Certifications}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\titleItem{Finished in the top 10\% in National Science Examination conducted by IAPT.}}{2015}
+      \resumeProjectHeading
+          {\titleItem{Appeared in Final level NTSE and RMO Examinations.}}{2017}
+      \resumeProjectHeading
+          {\titleItem{Achieved 25th DSL rank in Math Scholarship Exam.}}{2014}
+          \resumeProjectHeading
+          {\titleItem{Distinctive participation in 7th International Mathematics Olympiad.}}{2013}
+          \resumeProjectHeading
+          {\titleItem{Distinctive participation in 4th International Mathematics Olympiad.}}{2010}
+    \resumeSubHeadingListEnd
+% -------------------------------------
+%----------TECHNICAL SKILLS------------
+% -------------------------------------
+
+\section{Technical Skills}
+\subheadingtitlevspace
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    {\item{
+     \titleItem{Languages}{: C, C++, Python, Go, SQL, HTML/CSS} \\
+     \titleItem{Expertise Area}{: Data Structures and Algorithms, Object-Oriented Programming (OOP), Parallel Programming} \\
+     \titleItem{Tools and Frameworks}{: Docker, Kubernetes, Rabbitmq, Django, Flask, Powershell, Terraform, Numpy, Pandas, SciPy, Matplotlib} \\
+     \titleItem{Machine Learning}{: Neural networks, CNN, Keras, Deep Learning, TensorFlow, OpenCV, Scikit-learn, Theano, PyTorch} \\
+     \titleItem{Cloud Platforms}{: Microsoft Azure, AWS} \\
+     \titleItem{Database}{: PostgreSQL, MSSQL Server, MongoDB, Redis} \\
+     \titleItem{Continuous Integration/Continuous Deployment}{: Jenkins, GitHub Actions, GitLab CI/CD, Git}
+    }}
+ \end{itemize}
+\sectionspace
+
+
+
+    
+% -------------------------------------
+%----------EXPERIENCE------------------
+% -------------------------------------
+
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\titleItem{{Software Development Engineer}} $|$ \emph{Click2Cloud Inc.}}{October 2021 -- August 2023}
+\resumeItemListStart
+  \resumeItem{Drove automation for Agripilot.AI, integrating RabbitMQ as a message broker, enhancing system throughput and reducing message handling errors by 30\%. Developed modules in Go and Django.}
+  \resumeItem{Developed a multi-cluster support feature for Fornax under CentaurusInfra, extending KubeEdge and built upon Kubernetes, using Go, which improved cluster management efficiency by 50\%.}
+  \resumeItem{Enabled Windows Container support for nerdCTL, a Microsoft project for a Docker-like CLI, using Go, increasing platform compatibility and user adoption rates.}
+  \resumeItem{Delivered a Data Lineage graph solution tailored to client requirements using Azure Logic Apps and Golang, optimizing data flow visualization and compliance tracking.}
+  \resumeItem{Created a simulation tool in Python to model system behavior, enhancing predictive maintenance capabilities and reducing system downtime by 20\%.}
+  \resumeItem{Developed an end-to-end automation script in Azure using PowerShell and Terraform, which reduced deployment times by 40\% and improved resource utilization.}
+  \resumeItem{Developed a Python framework for managing multiple IoT devices concurrently, enhancing data stream handling and integration into analytics services and cloud storage.}
+  \resumeItem{Contributed to ETL pipeline construction in Google Cloud Platform using Python, improving data processing speeds and accuracy by 25\%.}
+  \resumeItemListEnd
+
+\resumeProjectHeading
+  {\titleItem{{Software Development Engineer Intern}} $|$ \emph{Mastersoft ERP Pvt Ltd}}{August 2020 -- February 2021}
+\resumeItemListStart
+  \resumeItem{Participated in all stages of the Software Development Life Cycle, including client demos, enhancing client engagement and feedback integration.}
+  \resumeItem{Automated CSV generation and data manipulation scripts in Python, which streamlined data handling processes and reduced manual data entry errors by over 50\%.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+% -------------------------------------
+%----------EDUCATION-------------------
+% -------------------------------------
+
+% \section{Education}
+%   \resumeSubHeadingListStart
+%     \resumeSubheading
+%       {University of Utah}{Salt Lake City, UT}
+%       {MS in Computer Science | GPA: 3.86}{January 2021 -- December 2023} 
+%     \resumeSubheading
+%       {SRM University}{Chennai, TN, India}
+%       {Bachelor of Technology in Computer Science and Engineering | GPA: 3.4}{August 2012 -- May 2016}
+%   \resumeSubHeadingListEnd
+% \vspace{-12pt}
+
+\section{Education}    
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+           {\titleItem{{Master of Science in Computer Science}} $|$ \emph{CGPA: 3.7/4.0}}{2023 -- Present}
+           \resumeItem{{Clarkson University} $,$ \emph{Potsdam, NY, USA}}
+        \resumeProjectHeading
+           {\titleItem{{Bachelor of Technology in Computer Science and Engineering}}}{2017 -- 2021}
+           \resumeItem{{Indian Institute of Information Technology} $,$ \emph{Nagpur, India}}
+    \resumeSubHeadingListEnd
+
+
+
+% -------------------------------------
+%----------PROJECTS--------------------
+% -------------------------------------
+
+ \section{Projects}    
+     \resumeSubHeadingListStart
+      \resumeProjectHeading
+           {\titleItem{Defence Security System (Real Time)} $|$ \emph{Machine Learning, Artificial Intelligence, Python}}{December 2024}
+            \resumeItemListStart
+            \resumeItem{Developed a real-time defense security system capable of tracking and countering enemies using Python. Integrated Machine Learning and Artificial Intelligence to enable automation, significantly enhancing system responsiveness and operational efficiency.}
+           \resumeItemListEnd
+        \resumeProjectHeading
+           {\titleItem{Identifying Disease Drug for Drug Repurposing using RWR} $|$ \emph{Python, TensorFlow, Machine Learning}}{September 2023}
+            \resumeItemListStart
+            \resumeItem{Developed a module using the Random Walk with Restart (RWR) algorithm in Python and TensorFlow to predict target genes for new diseases, showcasing advanced problem-solving and machine learning expertise.}
+           \resumeItemListEnd
+        \resumeProjectHeading
+           {\titleItem{Car Parking Reservation System} $|$ \emph{C++, Object-Oriented Programming}}{June 2020}
+            \resumeItemListStart
+            \resumeItem{Built an object-oriented car parking system in C++, managing arrivals, displays, charges, and departures, demonstrating efficient real-world problem-solving with C++.}
+           \resumeItemListEnd
+       
+     \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
